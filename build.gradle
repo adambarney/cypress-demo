@@ -29,5 +29,9 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
 	implementation('org.springframework.boot:spring-boot-starter-web')
 	compileOnly('org.projectlombok:lombok')
+	compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	testCompile group: 'org.assertj', name: 'assertj-core', version: '3.11.1'
 }

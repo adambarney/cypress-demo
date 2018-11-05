@@ -1,4 +1,4 @@
-package net.adambarney.cypressDemo.cypressdemo;
+package net.adambarney.cypressdemo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

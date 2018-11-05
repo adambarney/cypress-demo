@@ -1,4 +1,4 @@
-package net.adambarney.cypressDemo.cypressdemo;
+package net.adambarney.cypressDemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
