@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="js/addressAlert.js"></script>
+</head>
+<body>
+
+<div th:each="address,iterStat : ${addresses}">
+    <div th:id="'div_' + ${iterStat.index}">
+        <br>
+        <div th:text="${address.name}" th:id="'name_' + ${iterStat.index}"></div>
+        <div th:text="${address.addressLine1}" th:id="'address_' + ${iterStat.index}"></div>
+        <div th:text="${address.city}" th:id="'city_' + ${iterStat.index}"></div>
+        <div th:text="${address.state}" th:id="'state_' + ${iterStat.index}"></div>
+        <div th:text="${address.zip}" th:id="'zip_' + ${iterStat.index}"></div>
+        <button type="button" th:id="'delete_' + ${iterStat.index}" th:data-address-id="${address.id}">Delete</button>
+    </div>
+</div>
+</body>
+
+</html>

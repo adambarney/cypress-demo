@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!--/*@thymesVar id="address" type="net.adambarney.cypressDemo.model.Address"*/-->
+<form th:object="${address}" th:action="@{/address}" method="post">
+    <label>
+        Name:
+        <input type="text" th:field="*{name}">
+    </label>
+    <br>
+    <label>
+        Address:
+        <input type="text" th:field="*{addressLine1}">
+    </label>
+    <br>
+    <label>
+        City:
+        <input type="text" th:field="*{city}">
+    </label>
+    <br>
+    <label>
+        State:
+        <input type="text" th:field="*{state}">
+    </label>
+    <br>
+    <label>
+        Zip:
+        <input type="text" th:field="*{zip}">
+    </label>
+    <br>
+    <input type="submit" value="Save" id="address-submit">
+</form>
+</body>
+
+</html>

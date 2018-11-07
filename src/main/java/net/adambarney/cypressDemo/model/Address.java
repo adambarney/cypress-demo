@@ -6,14 +6,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
-
 @Data
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Address {
+
     @Id
-    private String id;
-    private String name;
-    private String email;
+    public String id;
+
+    public String name;
+    public String addressLine1;
+    public String city;
+    public String state;
+    public String zip;
 }
