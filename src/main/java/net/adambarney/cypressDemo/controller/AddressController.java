@@ -32,7 +32,7 @@ public class AddressController {
     @PostMapping("address")
     public String saveAddress(@ModelAttribute Address address, Model model) {
         addressRepository.save(address);
-        return getAddressBook(model);
+        return "redirect:address-book";
     }
 
     @GetMapping("address-book")
