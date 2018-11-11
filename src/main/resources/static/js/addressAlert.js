@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    addDeleteButtonListener();
+});
+
+function addDeleteButtonListener() {
     $('button').on('click', function () {
         let buttonId = $(this).attr('id');
         let divId = '#div' + buttonId.substring(buttonId.indexOf('_'), buttonId.length);
@@ -6,9 +10,9 @@ $(document).ready(function () {
         let idToBeDeleted = $(this).data("address-id");
         $.ajax({
             type: "POST",
-            contentType: "application/json",
+            contentType: "text/plain",
             url: "/address/delete",
-            data: JSON.stringify(idToBeDeleted),
+            data: idToBeDeleted,
             cache: false,
             timeout: 600000,
             success: [
@@ -21,5 +25,6 @@ $(document).ready(function () {
             }
         })
     })
-});
+}
+
 
