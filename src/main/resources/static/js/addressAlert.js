@@ -15,14 +15,12 @@ function addDeleteButtonListener() {
             data: idToBeDeleted,
             cache: false,
             timeout: 600000,
-            success: [
-                function (data) {
-                    divToBeDeleted.remove();
-                }
-            ],
-            error: function (data) {
-                alert(data);
-            }
+            success: [function (data) {
+                divToBeDeleted.remove();
+            }],
+            error: [function (data) {
+                console.log('Address cannot be deleted.' + data);
+            }]
         })
     })
 }
