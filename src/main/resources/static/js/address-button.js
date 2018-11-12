@@ -19,6 +19,7 @@ function addDeleteButtonListener() {
                 divToBeDeleted.remove();
             }],
             error: [function (data) {
+                divToBeDeleted.css('background-color', '#FF0000');
                 console.log('Address cannot be deleted.' + data);
             }]
         })
